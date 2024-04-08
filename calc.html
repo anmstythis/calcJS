@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+    </head>
+    <body>
+        <script>
+            var a = prompt("Введите первое число");
+            var op = prompt("Введите оператор (+ - * /).");
+            var b = prompt("Введите второе число");
+
+            num1 = Number.parseFloat(a);
+            num2 = Number.parseFloat(b);
+
+            if (isNaN(num1) || isNaN(num2))
+            {
+                alert("Введены не числа.");
+            }
+            else
+            {
+                if (op == '+')
+                {
+                    alert(num1 + num2);
+                }
+                else if (op == '-')
+                {
+                    alert(num1 - num2);
+                }
+                else if (op == '*')
+                {
+                    alert(num1 * num2);
+                }
+                else if (op == '/')
+                {
+                    if (!isFinite(num1 / num2))
+                    {
+                        alert("Не получается разделить на ноль.");
+                    }
+                    else
+                    {
+                        alert(num1 / num2);
+                    }
+                }
+                else
+                {
+                    alert("Такого оператора нет.");
+                }
+            }
+        </script>
+    </body>
+</html>
